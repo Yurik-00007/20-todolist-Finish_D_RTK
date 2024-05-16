@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/20-todolist-Finish_D_RTK/static/css/main.fca45619.css",
+    "main.js": "/20-todolist-Finish_D_RTK/static/js/main.b2c924d7.js",
+    "index.html": "/20-todolist-Finish_D_RTK/index.html",
+    "main.fca45619.css.map": "/20-todolist-Finish_D_RTK/static/css/main.fca45619.css.map",
+    "main.b2c924d7.js.map": "/20-todolist-Finish_D_RTK/static/js/main.b2c924d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fca45619.css",
+    "static/js/main.b2c924d7.js"
+  ]
+}
