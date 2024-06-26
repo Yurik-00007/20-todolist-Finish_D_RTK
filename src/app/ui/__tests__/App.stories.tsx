@@ -32,5 +32,6 @@ export const AppWithReduxStory: Story = {
 */
 
 export const AppStory: Story = {
-  render: () => <App demo={true} />,
+  // render: () => <App demo={true} />,
+  render: () => <App />,
 }

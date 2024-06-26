@@ -30,7 +30,7 @@ export const Header = memo(() => {
         <IconButton edge="start" color="inherit" aria-label="menu">
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6">Todolist</Typography>
+        <Typography variant="h6" >Todolist</Typography>
         {isLoggedIn && (
           <Button color="inherit" onClick={logoutHandler}>
             Log out

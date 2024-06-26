@@ -1,19 +1,25 @@
-import {tasksSlice} from 'features/TodolistsList/model/tasks/tasksSlice'
-import {todolistsSlice} from 'features/TodolistsList/model/todolists/todolistsSlice'
-import {TypedUseSelectorHook, useSelector} from 'react-redux'
-import {appSlice} from 'app/model/appSlice'
-import {authSlice} from 'features/auth/model/authSlice'
-import {configureStore} from '@reduxjs/toolkit'
+import { TypedUseSelectorHook, useSelector } from 'react-redux'
+import { configureStore } from '@reduxjs/toolkit'
+import { rootReducer } from './reducers'
 
+if (process.env.NODE_ENV === 'development' && module.hot) {
+  module.hot.accept('./reducers',
+    () => {
+      store.replaceReducer(rootReducer)
+    })
+}
+// replaceReducer позволяет заменять основной редюсер на лету(динамически)
 
 export const store = configureStore({
-  // reducer: rootReducer,
+  reducer: rootReducer,
+/*
   reducer: {
     auth: authSlice,
     app: appSlice,
     tasks: tasksSlice,
     todolists: todolistsSlice,
   },
+*/
 })
 
 

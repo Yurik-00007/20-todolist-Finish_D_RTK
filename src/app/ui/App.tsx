@@ -12,18 +12,28 @@ import {Header} from "./App/Header/Header";
 
 
 type Props = {
-  demo?: boolean
+  // demo?: boolean
 }
 
-export const App=({ demo = false }: Props)=> {
+// export const App=({ demo = false }: Props)=> {
+export const App=(props: Props)=> {
   const isInitialized = useAppSelector<boolean>(selectAuthIsInitialized)
   const {initializeApp}=useActions(authThunks)
 
+/*
   useEffect(() => {
     if (demo) {
       return
     }
+    // debugger
     initializeApp()
+  }, [])
+*/
+  useEffect(() => {
+    // debugger
+    if (!isInitialized) {
+      initializeApp()
+    }
   }, [])
 
   if (!isInitialized) {
@@ -33,11 +43,12 @@ export const App=({ demo = false }: Props)=> {
       </div>
     )
   }
+  console.log('321')
   return (
     <>
       <ErrorSnackbars />
       <Header />
-      <Routing demo={demo}/>
+      <Routing demo={false}/>
     </>
   )
 }

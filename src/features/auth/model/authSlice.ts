@@ -71,7 +71,6 @@ export const initializeApp = createAppAsyncThunk<{ isLoggedIn: boolean }, undefi
   `${slice.name}/initializeApp`,
   async (_, {rejectWithValue}) => {
     const res = await authAPI.meAuth()
-
     if (res.data.resultCode === ResultCode.Succeed) {
       return {isLoggedIn: true}
     } else {
