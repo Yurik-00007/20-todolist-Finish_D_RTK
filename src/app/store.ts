@@ -8,18 +8,9 @@ if (process.env.NODE_ENV === 'development' && module.hot) {
       store.replaceReducer(rootReducer)
     })
 }
-// replaceReducer позволяет заменять основной редюсер на лету(динамически)
 
 export const store = configureStore({
   reducer: rootReducer,
-/*
-  reducer: {
-    auth: authSlice,
-    app: appSlice,
-    tasks: tasksSlice,
-    todolists: todolistsSlice,
-  },
-*/
 })
 
 

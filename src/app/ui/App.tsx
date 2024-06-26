@@ -10,25 +10,10 @@ import s from 'app/ui/App.module.css'
 import {selectAuthIsInitialized} from "features/auth/model/authSelectors";
 import {Header} from "./App/Header/Header";
 
-
-type Props = {
-  // demo?: boolean
-}
-
-// export const App=({ demo = false }: Props)=> {
-export const App=(props: Props)=> {
+export const App=()=> {
   const isInitialized = useAppSelector<boolean>(selectAuthIsInitialized)
   const {initializeApp}=useActions(authThunks)
 
-/*
-  useEffect(() => {
-    if (demo) {
-      return
-    }
-    // debugger
-    initializeApp()
-  }, [])
-*/
   useEffect(() => {
     // debugger
     if (!isInitialized) {
@@ -43,7 +28,6 @@ export const App=(props: Props)=> {
       </div>
     )
   }
-  console.log('321')
   return (
     <>
       <ErrorSnackbars />

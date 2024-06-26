@@ -30,7 +30,6 @@ export const TodolistsList = memo(({demo = false}: Props) => {
     if(!todolists.length) {
       fetchTodolists()
     }
-    // fetchTodolists()
   }, [])
 
 
@@ -45,7 +44,6 @@ export const TodolistsList = memo(({demo = false}: Props) => {
   if (!isLoggedIn) {
     return <Navigate to={'/login'}/>
   }
-  console.log('321')
   return (
     <>
       <Grid container style={{padding: '20px'}}>
